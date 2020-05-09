@@ -1,0 +1,164 @@
+$color-btn: #ff3e79;
+
+//<-----------------------------Service----------------------------->
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1120px;
+  padding: 0 16px 24px 16px;
+}
+.service {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  &__text-second{
+    display: none;
+  }
+  &__title-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+  }
+  &__title {
+    margin: 0;
+    font-size: 28px;
+    line-height: 40px;
+    font-family: Lakes-bold, Arial, Helvetica, sans-serif;
+    &:before {
+      content: "";
+      height: 38px;
+      align-self: center;
+      border-left: 4px solid #41f6d7;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      position: absolute;
+      left: 0;
+    }
+  }
+  &__nav {
+    overflow-x: auto;
+    margin-bottom: 16px;
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+  }
+  &__item {
+    color: #7e7e82;
+    text-decoration: none;
+    padding: 8px 22px;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  &__item:hover,
+  &__item:focus,
+  &__item:active {
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+    background: #ffffff;
+    padding: 8px 20px;
+    transition: 0.5s;
+  }
+
+  &__info {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__img-cps {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .service {
+    &__content {
+      display: flex;
+      flex-direction: row;
+    }
+    &__info {
+      padding-right: 48px;
+      max-width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .service {
+    &__title {
+      position: relative;
+      &:before {
+        content: "";
+        height: 38px;
+        align-self: center;
+        border-left: 4px solid #41f6d7;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        position: absolute;
+        left: -38px;
+      }
+    }
+    &__nav {
+      overflow-x: visible;
+    }
+    &__item {
+      padding: 0;
+    }
+    &__btn-circle {
+      margin: 0 8px;
+    }
+    &__btn-circle--back-repair {
+      position: relative;
+      margin-right: 140px !important;
+    }
+    &__btn-circle--back-checkstatus {
+      position: relative;
+    }
+    &__btn-circle--back-repair::after {
+      content: "Оставить заявку";
+      right: 50px;
+      top: 10px;
+      position: absolute;
+      font-size: 16px;
+      line-height: 24px;
+      white-space: nowrap;
+    }
+    &__btn-circle--back-checkstatus::after {
+      content: "Статус ремонта";
+      right: 50px;
+      top: 10px;
+      position: absolute;
+      font-size: 16px;
+      line-height: 24px;
+      white-space: nowrap;
+    }
+  }
+  .btn-circle {
+    &--back-repair {
+      display: inline;
+    }
+    &--back-checkstatus {
+      display: inline;
+      margin-right: 0;
+    }
+  }
+}
+
+p {
+  margin: 0;
+}
+
+//<-----------------------------Close Service----------------------------->

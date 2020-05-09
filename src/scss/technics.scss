@@ -1,0 +1,51 @@
+.technics {
+  &__cart {
+    height: 160px;
+    display: block;
+    padding: 16px;
+    position: relative;
+
+    &-arrow {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+  &__link {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.technics__btn-next{
+  margin-left: 10px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .technics__btn-next{
+    display: block;
+  }
+  .swiper {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .technics__item:nth-of-type(n+4){
+    display: none;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .swiper {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  .technics__item:nth-of-type(n+4){
+    display: block;
+  }
+  .technics__item:nth-of-type(n+5){
+    display: none;
+  }
+}

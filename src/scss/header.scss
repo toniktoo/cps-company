@@ -1,0 +1,51 @@
+
+//<-----------------------------Header----------------------------->
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px;
+  &__link-logo {
+    margin-right: auto;
+    margin-left: 8px;
+  }
+  &__btn-circle {
+    margin: 0 8px;
+  }
+  &__linear {
+    border-left: 2px solid #eaeaea;
+    margin: 0 8px;
+  }
+}
+
+.btn-circle {
+  &--mod-disabled {
+    display: none;
+  }
+  &--back-checkstatus {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-circle {
+    &--back-call,
+    &--back-chat,
+    &--back-user {
+      display: inline;
+    }
+  }
+  .header__panel {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    display: none;
+  }
+}
+
+//<-----------------------------Close Header----------------------------->

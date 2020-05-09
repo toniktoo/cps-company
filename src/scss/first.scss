@@ -1,0 +1,148 @@
+$color-btn: #ff3e79;
+
+@font-face {
+  font-family: Lakes-bold;
+  src: url(../fonts/TTLakes-Bold.woff);
+}
+@font-face {
+  font-family: Lakes-medium;
+  src: url(../fonts/TTLakes-Medium.woff);
+}
+@font-face {
+  font-family: Lakes-regular;
+  src: url(../fonts/TTLakesCompressed-Regular.woff);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Lakes-medium, Arial, Helvetica, sans-serif;
+  color: #1b1c21;
+}
+
+.body-container{
+  background-color: #f8f8f8;
+}
+
+@media screen and (min-width: 1440px){
+  .body-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1120px;
+    padding: 0 16px 24px 16px;
+   
+  }
+}
+
+//<-----------------------------Button----------------------------->
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $color-btn;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: inset 0 0 0 3px #ff004c;
+    opacity: 40%;
+    transition: 0.5s;
+  }
+
+  &--back-call {
+    background-image: url("../img/btn/call.svg");
+  }
+  &--back-user {
+    background-image: url("../img/btn/user.svg");
+  }
+  &--back-chat {
+    background-image: url("../img/btn/chat.svg");
+  }
+  &--back-repair {
+    background-image: url("../img/btn/repair.svg");
+  }
+  &--back-checkstatus {
+    background-image: url("../img/btn/checkstatus.svg");
+  }
+  &--back-menu {
+    background-image: url("../img/btn/menu.svg");
+  }
+  &--back-exit {
+    background-image: url(../img/btn/exit.svg);
+  }
+  &--back-search {
+    background-image: url(../img/btn/search.svg);
+  }
+}
+
+.btn-next {
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #1b1c21;
+  position: relative;
+  padding-left: 24px;
+  padding-bottom: 10px;
+  margin: 10px 0 0 0;
+  font-weight: 600;
+  background: #f8f8f8;
+  border: none;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 8px;
+    top: 8px;
+    background-image: url("../img/btn/arrow-down.svg");
+    background-repeat: no-repeat;
+  }
+  &:hover {
+    color: #ff3e79;
+  }
+}
+
+//<-----------------------------Close Button----------------------------->
+
+//<-----------------------------Hidden----------------------------->
+
+.modal--open-off{
+  transition: 1s;
+  transform: translateX(100%);
+  z-index: 3;
+}
+.modal--open-on{
+  transform: translateX(0%);
+}
+@media screen and (max-width: 1439px){
+  .menu--open-off{
+    display: none;
+    transition: 1s;
+    transform: translateX(-100%);
+    z-index: 3;
+  }
+  .menu--open-on{
+    display: block;
+    transform: translateX(0%);
+  }
+}
+
+.hidden-effect--mod-disabled {
+  display: none;
+}
+.hidden-effect--mod-active {
+  transition: opacity 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  opacity: 0.99;
+  z-index: 2;
+}
+
+//<-----------------------------Close Hidden----------------------------->

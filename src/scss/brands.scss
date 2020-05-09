@@ -1,0 +1,112 @@
+@media screen and (min-width: 1440px) {
+  .brands,
+  .technics,
+  .price{
+    display: flex;
+    flex-direction: column;
+    max-width: 1120px;
+    padding: 0 16px 24px 16px;
+  }
+}
+.brands__link{
+  display: block;
+}
+.subtitle-wrap {
+  background-image: linear-gradient(270deg, #ffffff 0%, #f8f8f8 98.61%);
+  box-sizing: border-box;
+  padding: 24px ;
+  
+  &__subtitle {
+    margin: 0;
+    
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #7e7e82;
+  }
+}
+.nav-container{
+  background-color: #f8f8f8;
+}
+.swiper {
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__list {
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    list-style: none;
+  }
+}
+.brands__cart {
+  background-color: white;
+  width: 240px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 16px;
+  
+}
+.cart-arrow {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ff3e79;
+  border-radius: 100%;
+  background-image: url("../img/btn/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  &:hover {
+    background-color: #ff3e79;
+    transition: 0.5s;
+    background-image: url("../img/btn/arrow-right-white.svg")
+  }
+}
+.pagination {
+  text-align: center;
+}
+
+.brands__btn-next{
+  margin-left: 10px;
+  display: none;
+  
+}
+@media screen and (min-width: 768px) {
+  .brands__btn-next{
+    display: block;
+  }
+  .swiper {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .brands__item:nth-of-type(n+7){
+    display: none;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .swiper {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  .brands__item:nth-of-type(n+7){
+    display: block;
+  }
+  .brands__item:nth-of-type(n+9){
+    display: none;
+  }
+}
